@@ -1,0 +1,10 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/AbisSkin;component/Themes/Core/Main/AbisWindow.xaml"/>
+        <ResourceDictionary Source="/AbisSkin;component/Themes/Core/AbisScrollViewer.xaml"/>
+        <ResourceDictionary Source="/AbisSkin;component/Themes/Core/AbisTabItem.xaml"/>
+        <ResourceDictionary Source="/AbisSkin;component/Themes/Core/AbisTabControl.xaml"/>
+
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

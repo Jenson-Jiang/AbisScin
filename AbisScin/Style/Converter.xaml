@@ -1,0 +1,14 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:AbisSkinConverter="clr-namespace:AbisSkin.Controls.Converter;assembly=AbisSkin"
+                    xmlns:converter="clr-namespace:AbisScin.Converter">
+    <!--转换器-->
+    <AbisSkinConverter:BoolToVisibility x:Key="BoolToVisibility"/>
+    <AbisSkinConverter:BoolToForeground x:Key="BoolToForeground"/>
+
+    <BooleanToVisibilityConverter x:Key="Boolean2VisibilityConverter"/>
+
+    <converter:StringRepeatConverter x:Key="StringRepeatConverter"/>
+
+
+</ResourceDictionary>

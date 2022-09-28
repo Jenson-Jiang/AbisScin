@@ -1,0 +1,61 @@
+﻿<Abis:AbisWindow x:Class="AbisScin.MainWindow"
+                 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                 xmlns:local="clr-namespace:AbisScin"
+                 xmlns:Abis="clr-namespace:AbisSkin.Controls.Core;assembly=AbisSkin"
+                 xmlns:converter="clr-namespace:AbisScin.Converter"
+                 Width="1000"
+                 Height="600"
+                 BorderThickness="0"
+                 Background="#FFF" mc:Ignorable="d"
+                 DataContext="{Binding Source={StaticResource Locator},Path=Main}">
+    <Grid Background="{Binding MainBackground}">
+        <Abis:AbisTabControl Background="#FFF" SelectedIndex="{Binding SelectedModularIndex}">
+            <Abis:AbisTabControl.Resources>
+                <Style TargetType="TabPanel">
+                    <Setter Property="HorizontalAlignment" Value="Center"/>
+                </Style>
+                <Style TargetType="{x:Type Abis:AbisTabItem}">
+                    <Setter Property="Width" Value="120"/>
+                    <Setter Property="Height" Value="50"/>
+                </Style>
+            </Abis:AbisTabControl.Resources>
+            <Abis:AbisTabItem Header="推荐">
+                <Border BorderBrush="{StaticResource DefaultBorderBrush}" BorderThickness="0,1,0,0">
+                    <ContentControl  Content="{Binding PracticalCase}"/>
+                </Border>
+            </Abis:AbisTabItem>
+            <Abis:AbisTabItem Header="收藏">
+                <Border BorderBrush="{StaticResource DefaultBorderBrush}" BorderThickness="0,1,0,0">
+                    <ContentControl Content="{Binding CommonControlCase}"/>
+                </Border>
+            </Abis:AbisTabItem>
+            <Abis:AbisTabItem Header="本地">
+                <Border BorderBrush="{StaticResource DefaultBorderBrush}" BorderThickness="0,0,0,0">
+                    <ContentControl Content="{Binding AbisSkinAbout}"/>
+                </Border>
+            </Abis:AbisTabItem>
+            <Abis:AbisTabItem Header="设置">
+                <Border >
+                    <ContentControl Content="{Binding AbisSkinSupport}"/>
+                </Border>
+            </Abis:AbisTabItem>
+        </Abis:AbisTabControl>
+
+        <Grid Background="{Binding MainBackground}" Visibility="{Binding IsInit,Converter={StaticResource BoolToVisibility}}">
+            <Border Width="300" Height="160">
+                <!--Style="{StaticResource ShowControlBorder}"-->
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="100"></RowDefinition>
+                        <RowDefinition Height="60"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Abis:AnimationPath Grid.Row="0" Width="100" Height="100" VerticalAlignment="Center" Data="{StaticResource Icon_Cloud}" Stretch="Uniform" Stroke="{DynamicResource DefaultBrush}" StrokeThickness="3"  Duration="0:0:6" />
+                    <TextBlock Grid.Row="1" FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="{DynamicResource DefaultBrush}">初始化中...</TextBlock>
+                </Grid>
+            </Border>
+        </Grid>
+    </Grid>
+</Abis:AbisWindow>

@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1F130080-95B7-401F-9686-B1D41B32EF39}</ProjectGuid>
+    <OutputType>library</OutputType>
+    <RootNamespace>AbisSkin</RootNamespace>
+    <AssemblyName>AbisSkin</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.CodeDom, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.CodeDom.6.0.0\lib\net461\System.CodeDom.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\ControlEnum.cs" />
+    <Compile Include="Controls\Converter\BoolToForeground.cs" />
+    <Compile Include="Controls\Converter\BoolToVisibility.cs" />
+    <Compile Include="Controls\Converter\CalendarDayButtonTypeConverter.cs" />
+    <Compile Include="Controls\Converter\CornerRadiusToDouble.cs" />
+    <Compile Include="Controls\Converter\DoubleFactor.cs" />
+    <Compile Include="Controls\Converter\DoubleToCornerRadius.cs" />
+    <Compile Include="Controls\Converter\DoubleToThickness.cs" />
+    <Compile Include="Controls\Converter\IndentConverter.cs" />
+    <Compile Include="Controls\Converter\OffsetConverter.cs" />
+    <Compile Include="Controls\Converter\StringIsEmptyConverter.cs" />
+    <Compile Include="Controls\Converter\StringToVisibility.cs" />
+    <Compile Include="Controls\Core\AbisScrollViewer.cs" />
+    <Compile Include="Controls\Core\AbisStackPagePanel.cs" />
+    <Compile Include="Controls\Core\AbisTabControl.cs" />
+    <Compile Include="Controls\Core\AbisTreeView.cs" />
+    <Compile Include="Controls\Core\AbisTabItem.cs" />
+    <Compile Include="Controls\Core\AbisWaterfallFlow.cs" />
+    <Compile Include="Controls\Core\AngleBorder.cs" />
+    <Compile Include="Controls\Core\AnimationPath.cs" />
+    <Compile Include="Controls\Data\Extension\EdgeElement.cs" />
+    <Compile Include="Controls\Data\Extension\GeometryExtension.cs" />
+    <Compile Include="Controls\Data\Extension\UIElementExtension.cs" />
+    <Compile Include="Controls\Data\ValueBoxes.cs" />
+    <Compile Include="Controls\Expression\Drawing\GeometryUtils.cs" />
+    <Compile Include="Controls\Expression\Drawing\MathUtils.cs" />
+    <Compile Include="Controls\Tools\AnimationUtils.cs" />
+    <Compile Include="Controls\Utils\StringToBrushUtils.cs" />
+    <Compile Include="Themes\Core\Main\AbisWindow.xaml.cs">
+      <DependentUpon>AbisWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Themes\Theme.cs" />
+    <Compile Include="Utility\Element\ElementBase.cs" />
+    <Compile Include="Utility\Type\DateFormatType.cs" />
+    <Compile Include="Utility\Type\ImageSizeType.cs" />
+    <Compile Include="Utility\Type\LayoutType.cs" />
+    <Page Include="Themes\Core\AbisStackPagePanelSkin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Core\AbisTabControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Core\AbisScrollViewer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Core\AbisTabItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Core\AbisTreeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Core\Abis.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Core\AbisWaterfallFlow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Core\Main\AbisBase.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Core\Main\AbisWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="Controls\Core\AbisImage.cs" />
+    <Compile Include="Controls\Core\AbisRipple.cs" />
+    <Compile Include="Controls\Core\AbisRippleAssist.cs" />
+    <Compile Include="Controls\Core\AbisTextBlock.cs" />
+    <Compile Include="Controls\Core\Main\AbisWindow.cs" />
+    <Compile Include="Controls\Utility.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Resources\ffmpeg\LICENSE" />
+    <None Include="Resources\ffmpeg\presets\libvpx-1080p.ffpreset" />
+    <None Include="Resources\ffmpeg\presets\libvpx-1080p50_60.ffpreset" />
+    <None Include="Resources\ffmpeg\presets\libvpx-360p.ffpreset" />
+    <None Include="Resources\ffmpeg\presets\libvpx-720p.ffpreset" />
+    <None Include="Resources\ffmpeg\presets\libvpx-720p50_60.ffpreset" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Commen\" />
+    <Folder Include="Controls\Core\Assembly\" />
+    <Folder Include="Themes\Core\Assembly\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\logo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\ffmpeg\bin\ffmpeg.exe" />
+    <Content Include="Resources\ffmpeg\bin\ffplay.exe" />
+    <Content Include="Resources\ffmpeg\bin\ffprobe.exe" />
+    <Content Include="Resources\ffmpeg\doc\bootstrap.min.css" />
+    <Content Include="Resources\ffmpeg\doc\default.css" />
+    <Content Include="Resources\ffmpeg\doc\developer.html" />
+    <Content Include="Resources\ffmpeg\doc\faq.html" />
+    <Content Include="Resources\ffmpeg\doc\fate.html" />
+    <Content Include="Resources\ffmpeg\doc\ffmpeg-all.html" />
+    <Content Include="Resources\ffmpeg\doc\ffmpeg-bitstream-filters.html" />
+    <Content Include="Resources\ffmpeg\doc\ffmpeg-codecs.html" />
+    <Content Include="Resources\ffmpeg\doc\ffmpeg-devices.html" />
+    <Content Include="Resources\ffmpeg\doc\ffmpeg-filters.html" />
+    <Content Include="Resources\ffmpeg\doc\ffmpeg-formats.html" />
+    <Content Include="Resources\ffmpeg\doc\ffmpeg-protocols.html" />
+    <Content Include="Resources\ffmpeg\doc\ffmpeg-resampler.html" />
+    <Content Include="Resources\ffmpeg\doc\ffmpeg-scaler.html" />
+    <Content Include="Resources\ffmpeg\doc\ffmpeg-utils.html" />
+    <Content Include="Resources\ffmpeg\doc\ffmpeg.html" />
+    <Content Include="Resources\ffmpeg\doc\ffplay-all.html" />
+    <Content Include="Resources\ffmpeg\doc\ffplay.html" />
+    <Content Include="Resources\ffmpeg\doc\ffprobe-all.html" />
+    <Content Include="Resources\ffmpeg\doc\ffprobe.html" />
+    <Content Include="Resources\ffmpeg\doc\general.html" />
+    <Content Include="Resources\ffmpeg\doc\git-howto.html" />
+    <Content Include="Resources\ffmpeg\doc\libavcodec.html" />
+    <Content Include="Resources\ffmpeg\doc\libavdevice.html" />
+    <Content Include="Resources\ffmpeg\doc\libavfilter.html" />
+    <Content Include="Resources\ffmpeg\doc\libavformat.html" />
+    <Content Include="Resources\ffmpeg\doc\libavutil.html" />
+    <Content Include="Resources\ffmpeg\doc\libswresample.html" />
+    <Content Include="Resources\ffmpeg\doc\libswscale.html" />
+    <Content Include="Resources\ffmpeg\doc\mailing-list-faq.html" />
+    <Content Include="Resources\ffmpeg\doc\nut.html" />
+    <Content Include="Resources\ffmpeg\doc\platform.html" />
+    <Content Include="Resources\ffmpeg\doc\style.min.css" />
+    <Resource Include="Resources\ffmpeg\README.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

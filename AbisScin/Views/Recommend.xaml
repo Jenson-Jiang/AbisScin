@@ -1,0 +1,55 @@
+﻿<UserControl x:Class="AbisScin.Views.Recommend"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AbisScin.Views"
+             xmlns:Abis="clr-namespace:AbisSkin.Controls.Core;assembly=AbisSkin"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid Background="{StaticResource DefaultBackground}" Tag="{Binding IsLave}">
+        <Abis:AbisScrollViewer HorizontalScrollBarVisibility="Disabled">
+            <Abis:AbisWaterfallFlow x:Name="waterfallFlow" ListWidth="300">
+                <!--<Grid>
+                    <Border Style="{StaticResource ShowControlBorder}">
+                        <Abis:AnimationPath Width="100" Height="100" VerticalAlignment="Center" Data="{StaticResource Icon_Github}" Stretch="Uniform" Stroke="{DynamicResource DefaultBrush}" StrokeThickness="3"  Duration="0:0:6" />
+                    </Border>
+                </Grid>-->
+                <local:ImageAssembly />
+                <local:ImageAssembly />
+
+                <local:ImageAssembly />
+                <local:ImageAssembly />
+                <local:ImageAssembly />
+                <local:ImageAssembly />
+                <local:ImageAssembly />
+                <local:ImageAssembly />
+                <local:ImageAssembly />
+                <local:ImageAssembly />
+                <local:ImageAssembly />
+                <local:ImageAssembly />
+                <local:ImageAssembly />
+                <local:ImageAssembly />
+                <local:ImageAssembly />
+                <local:ImageAssembly />
+                <local:ImageAssembly />
+                <local:ImageAssembly />
+                <local:ImageAssembly />
+                <local:ImageAssembly />
+                <local:ImageAssembly />
+                <local:ImageAssembly />
+                <local:ImageAssembly />
+                <local:ImageAssembly />
+            </Abis:AbisWaterfallFlow>
+
+        </Abis:AbisScrollViewer>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,20" Orientation="Horizontal">
+            <Button Width="30">1</Button>
+            <Button Width="30">1</Button>
+
+            <Button Width="30">1</Button>
+            <Button Width="30">1</Button>
+            <Button Width="30">1</Button>
+        </StackPanel>
+    </Grid>
+</UserControl>
